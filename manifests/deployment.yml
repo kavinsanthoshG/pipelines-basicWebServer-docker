@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kavinsanthoshgpipelinesbasicwebserverdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kavinsanthoshgpipelinesbasicwebserverdocker
+  template:
+    metadata:
+      labels:
+        app: kavinsanthoshgpipelinesbasicwebserverdocker 
+    spec:
+      containers:
+        - name: kavinsanthoshgpipelinesbasicwebserverdocker 
+          image: kcontainerregistry.azurecr.io/kavinsanthoshgpipelinesbasicwebserverdocker
+          ports:
+          - containerPort: 8080
